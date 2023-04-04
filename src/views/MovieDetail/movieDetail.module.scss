@@ -1,0 +1,23 @@
+.movieDetail{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1120px;
+  margin-top: 1em;
+  .movieInfo{
+    margin-left: 1em;
+    a{
+      background-color: #61dafb;
+      text-decoration: none;
+      padding: 1em;
+      margin-top: 1em;
+      &:hover {
+        background-color: #61dafb99;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
