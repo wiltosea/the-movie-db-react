@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MovieService } from '../api/MoviesService';
+import { MovieService } from '../../api/MoviesService';
 import { Link, useParams } from 'react-router-dom';
 
 export function MovieDetail() {

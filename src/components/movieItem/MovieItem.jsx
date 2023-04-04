@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import styles from './movieItem.module.scss';
 
 export function MovieItem({ movie }) {
   return (
-    <div ClassName="movie-card">
+    <div className={styles.card}>
       <img
         src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
         alt={movie.title}
