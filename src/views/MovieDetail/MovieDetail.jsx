@@ -1,19 +1,11 @@
-import { useEffect, useState } from 'react';
-import { MovieService } from '../../api/MoviesService';
 import { Link, useParams } from 'react-router-dom';
 import styles from './movieDetail.module.scss';
+import useMovieDetail from '../../hooks/useMovieDetail';
 
 export function MovieDetail() {
-  const [movie, setMovie] = useState({});
   const { movieId } = useParams();
+  const movie = useMovieDetail(movieId);
 
-  const getMovie = async () => {
-    const { data } = await MovieService.getMovieDetail(movieId);
-    setMovie(data);
-  };
-  useEffect(() => {
-    getMovie();
-  }, []);
   console.log(movie);
   return (
     <section className={styles.movieDetail}>

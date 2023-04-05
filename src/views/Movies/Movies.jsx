@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { MovieService } from '../../api/MoviesService';
 import { MovieItem } from '../../components/movieItem/MovieItem';
+import { useMovies } from '../../hooks/useMovies';
 import styles from './movies.module.scss';
 
 export function Movies() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    MovieService.getMovies().then((response) => {
-      setMovies(response.data.results);
-    });
-  }, []);
+  const movies = useMovies();
 
   return (
     <div className={styles.main}>
